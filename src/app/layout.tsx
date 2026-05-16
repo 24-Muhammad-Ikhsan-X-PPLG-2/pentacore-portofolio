@@ -27,7 +27,10 @@ export default function RootLayout({
       className={`${InterFont.variable} ${InterFont.className} h-full antialiased`}
       suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col" suppressHydrationWarning>
+      <body
+        className="min-h-full flex flex-col overflow-x-hidden"
+        suppressHydrationWarning
+      >
         <LenisProvider>{children}</LenisProvider>
       </body>
     </html>

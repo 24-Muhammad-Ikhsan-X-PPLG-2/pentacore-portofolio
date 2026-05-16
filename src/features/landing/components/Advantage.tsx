@@ -1,12 +1,19 @@
 "use client";
 
 import { BadgeCheck, Rocket, Table2 } from "lucide-react";
+import { motion } from "motion/react";
 
 const Advantage = () => {
   return (
-    <section className="bg-[#131b2e] py-12 md:py-16 lg:py-24 px-4 sm:px-6 lg:px-8 text-white">
+    <section className="bg-[#131b2e] overflow-hidden py-12 md:py-16 lg:py-24 px-4 sm:px-6 lg:px-8 text-white">
       <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row gap-8 items-start lg:items-center">
-        <div className="w-full lg:w-1/2">
+        <motion.div
+          initial={{ x: -50, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+          className="w-full lg:w-1/2"
+        >
           <p className="text-[#c0c9fc] text-sm font-semibold">THE ADVANTAGE</p>
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black leading-tight mt-4">
             Built For Scale, Designed for Impact
@@ -58,9 +65,15 @@ const Advantage = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="w-full lg:w-1/2 bg-[#0b1326] p-4 sm:p-6 md:p-8 rounded-xl">
+        <motion.div
+          initial={{ x: 50, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1, delay: 1 }}
+          viewport={{ once: true }}
+          className="w-full lg:w-1/2 bg-[#0b1326] p-4 sm:p-6 md:p-8 rounded-xl"
+        >
           <div className="grid grid-cols-2 gap-4">
             <div className="bg-[#171f32] rounded-xl flex flex-col items-center justify-center p-4">
               <h4 className="text-2xl sm:text-3xl md:text-4xl text-[#c0c9fc] font-semibold">
@@ -95,7 +108,7 @@ const Advantage = () => {
               </p>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

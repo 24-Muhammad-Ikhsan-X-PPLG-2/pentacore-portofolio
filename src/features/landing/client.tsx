@@ -5,7 +5,6 @@ import HeroSection from "./components/HeroSection";
 import SpecializedSection from "./components/SpecializedSection";
 import RecentPortofolio from "./components/RecentPortofolio";
 import Advantage from "./components/Advantage";
-import { AtSign, Earth, Sparkles } from "lucide-react";
 import Footer from "@/components/ui/Footer";
 
 const LandingPageClient = () => {

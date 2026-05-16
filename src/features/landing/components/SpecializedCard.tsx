@@ -1,16 +1,27 @@
 "use client";
 
 import { ElementType, FC } from "react";
+import { motion } from "motion/react";
 
 type SpecializedCardProps = {
+  delay: number;
   Icon: ElementType;
   title: string;
   desc: string;
 };
 
-const SpecializedCard: FC<SpecializedCardProps> = ({ desc, Icon, title }) => {
+const SpecializedCard: FC<SpecializedCardProps> = ({
+  desc,
+  Icon,
+  title,
+  delay,
+}) => {
   return (
-    <div
+    <motion.div
+      initial={{ y: 20, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{ duration: 1, delay: 0.5 * delay }}
+      viewport={{ once: true }}
       className="bg-[#171f32] p-5 w-full max-w-90 rounded-lg shadow-xl"
       suppressHydrationWarning
     >
@@ -21,7 +32,7 @@ const SpecializedCard: FC<SpecializedCardProps> = ({ desc, Icon, title }) => {
       <p className="mt-4 leading-relaxed text-gray-300 text-sm sm:text-base">
         {desc}
       </p>
-    </div>
+    </motion.div>
   );
 };
 

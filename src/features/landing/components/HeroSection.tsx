@@ -1,11 +1,18 @@
 "use client";
 
 import { ArrowRight } from "lucide-react";
+import { motion } from "motion/react";
 
 const HeroSection = () => {
   return (
     <section className="pb-15 pt-35 text-white bg-[#0b1326] px-6 md:px-10 xl:px-20 flex justify-center items-center">
-      <div className="flex flex-col lg:flex-row justify-center items-center gap-12">
+      <motion.div
+        initial={{ y: 20, opacity: 0 }}
+        transition={{ duration: 1 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        className="flex flex-col lg:flex-row justify-center items-center gap-12"
+      >
         <div className="w-full max-w-3xl lg:max-w-2xl">
           <div className="inline-flex px-3 py-1 bg-gray-500/50 border border-gray-500/80 rounded-full">
             <p className="text-[10px] sm:text-xs font-bold text-gray-300 uppercase tracking-[0.2em]">
@@ -44,7 +51,7 @@ const HeroSection = () => {
             alt="Landing showcase"
           />
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
