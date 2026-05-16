@@ -1,77 +1,82 @@
 "use client";
 
-import { FC } from "react";
+import { FC, useState } from "react";
+import NavLinks from "./NavLinks";
+import NavbarMobile from "./NavbarMobile";
 
 type NavbarProps = {
   currentPage?: string;
 };
 
 const Navbar: FC<NavbarProps> = ({ currentPage = "home" }) => {
-  return (
-    <nav className="w-full fixed z-9999 bg-[#0c1326] border-b border-gray-800">
-      <div className="h-18 flex items-center px-4 justify-between">
-        <h1 className="text-white font-black text-2xl">Pentacore Labs</h1>
-        <Links currentPage={currentPage} />
-        <button className="px-7 py-2.5 font-semibold text-sm cursor-pointer hover:-translate-y-1 transition duration-300 hover:shadow-[0_20px_60px_rgba(59,130,246,0.45)] bg-[#024ef8] text-white rounded-xl">
-          Start Project
-        </button>
-      </div>
-    </nav>
-  );
-};
+  const [open, setOpen] = useState(false);
 
-type LinksProps = {
-  currentPage: string;
-};
-
-const Links: FC<LinksProps> = ({ currentPage }) => {
-  const getClassActivePage = (page: string) => {
-    if (page === currentPage) {
-      return "font-bold";
-    }
-    return "";
-  };
-  const isActivePage = (page: string) => {
-    if (page === currentPage) {
-      return true;
-    }
-    return false;
-  };
   return (
-    <div className="flex items-center text-white font-medium gap-7">
-      <div className="flex flex-col gap-1 items-center">
-        <a href="" className={getClassActivePage("home")}>
-          Home
-        </a>
-        {isActivePage("home") ? (
-          <div className="h-0.5 w-full bg-white"></div>
-        ) : null}
-      </div>
-      <div className="flex flex-col gap-1">
-        <a href="" className={getClassActivePage("services")}>
-          Services
-        </a>
-        {isActivePage("services") ? (
-          <div className="h-0.5 w-full bg-white"></div>
-        ) : null}
-      </div>
-      <div className="flex flex-col gap-1">
-        <a href="" className={getClassActivePage("portofolio")}>
-          Portofolio
-        </a>
-        {isActivePage("portofolio") ? (
-          <div className="h-0.5 w-full bg-white"></div>
-        ) : null}
-      </div>
-      <div className="flex flex-col gap-1">
-        <a href="" className={getClassActivePage("about")}>
-          About
-        </a>
-        {isActivePage("about") ? (
-          <div className="h-0.5 w-full bg-white"></div>
-        ) : null}
-      </div>
-    </div>
+    <>
+      <nav className="w-full fixed z-9999 bg-[#0c1326]/90 backdrop-blur-lg border-b border-gray-800">
+        <div className="h-18 flex items-center px-4 justify-between">
+          <div className="flex gap-1 items-center">
+            <img src="/logo.webp" className="w-16" width={64} alt="" />
+            <h1 className="text-white font-black text-2xl">Pentacore Labs</h1>
+          </div>
+
+          {/* Desktop links */}
+          <div className="hidden md:flex items-center">
+            <NavLinks currentPage={currentPage} />
+          </div>
+
+          {/* Desktop CTA */}
+          <div className="hidden md:block">
+            <button className="px-7 py-2.5 font-semibold text-sm cursor-pointer hover:-translate-y-1 transition duration-300 hover:shadow-[0_20px_60px_rgba(59,130,246,0.45)] bg-[#024ef8] text-white rounded-xl">
+              Start Project
+            </button>
+          </div>
+
+          {/* Mobile hamburger */}
+          <div className="md:hidden flex items-center">
+            <button
+              onClick={() => setOpen(true)}
+              aria-label="Open menu"
+              aria-expanded={open}
+              className="p-2 rounded-md text-white hover:bg-white/5"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 6H20"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M4 12H20"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M4 18H20"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      {/* Mobile Sidebar / Drawer */}
+      <NavbarMobile currentPage={currentPage} open={open} setOpen={setOpen} />
+    </>
   );
 };
 

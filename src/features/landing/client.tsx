@@ -2,9 +2,11 @@
 
 import Navbar from "@/components/ui/navbar";
 import HeroSection from "./component/HeroSection";
-import { Code, MonitorSmartphone, PencilRuler } from "lucide-react";
-import { ElementType, FC, ReactNode, useEffect, useState } from "react";
 import SpecializedSection from "./component/SpecializedSection";
+import RecentPortofolio from "./component/RecentPortofolio";
+import Advantage from "./component/Advantage";
+import { AtSign, Earth, Sparkles } from "lucide-react";
+import Footer from "@/components/ui/Footer";
 
 const LandingPageClient = () => {
   return (
@@ -12,6 +14,9 @@ const LandingPageClient = () => {
       <Navbar currentPage="home" />
       <HeroSection />
       <SpecializedSection />
+      <RecentPortofolio />
+      <Advantage />
+      <Footer />
     </>
   );
 };
