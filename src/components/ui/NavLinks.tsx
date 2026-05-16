@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { FC } from "react";
 
 type LinksProps = {
@@ -30,13 +31,13 @@ const NavLinks: FC<LinksProps> = ({
       }
     >
       <div className={mobile ? "mb-2" : "flex flex-col gap-1 items-center"}>
-        <a
-          href=""
+        <Link
+          href="/"
           className={`${baseLinkClasses} ${getClassActivePage("home")}`}
           onClick={onLinkClick}
         >
           Home
-        </a>
+        </Link>
         {isActivePage("home") ? (
           <div className="h-0.5 w-full bg-white"></div>
         ) : null}
@@ -56,13 +57,13 @@ const NavLinks: FC<LinksProps> = ({
       </div>
 
       <div className={mobile ? "mb-2" : "flex flex-col gap-1"}>
-        <a
-          href=""
+        <Link
+          href="/portofolio"
           className={`${baseLinkClasses} ${getClassActivePage("portofolio")}`}
           onClick={onLinkClick}
         >
           Portofolio
-        </a>
+        </Link>
         {isActivePage("portofolio") ? (
           <div className="h-0.5 w-full bg-white"></div>
         ) : null}

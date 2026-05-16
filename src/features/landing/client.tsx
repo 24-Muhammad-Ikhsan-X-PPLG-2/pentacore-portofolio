@@ -1,10 +1,10 @@
 "use client";
 
 import Navbar from "@/components/ui/navbar";
-import HeroSection from "./component/HeroSection";
-import SpecializedSection from "./component/SpecializedSection";
-import RecentPortofolio from "./component/RecentPortofolio";
-import Advantage from "./component/Advantage";
+import HeroSection from "./components/HeroSection";
+import SpecializedSection from "./components/SpecializedSection";
+import RecentPortofolio from "./components/RecentPortofolio";
+import Advantage from "./components/Advantage";
 import { AtSign, Earth, Sparkles } from "lucide-react";
 import Footer from "@/components/ui/Footer";
 
