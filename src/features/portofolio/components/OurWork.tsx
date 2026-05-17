@@ -2,6 +2,7 @@
 
 import ButtonCategory from "./ButtonCategory";
 import CardProject from "./CardProject";
+import { motion } from "motion/react";
 
 const OurWork = () => {
   return (
@@ -9,14 +10,34 @@ const OurWork = () => {
       <div className="w-full max-w-7xl">
         <div className="flex flex-col lg:flex-row lg:items-end gap-8 justify-between">
           <div className="w-full lg:max-w-xl">
-            <p className="text-[#c0c9fc] font-semibold">OUR WORK</p>
-            <h1 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-black leading-tight">
+            <motion.p
+              initial={{ x: -20, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: true }}
+              className="text-[#c0c9fc] font-semibold"
+            >
+              OUR WORK
+            </motion.p>
+            <motion.h1
+              initial={{ x: -20, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-black leading-tight"
+            >
               Precision Engineered{" "}
               <span className="text-[#bbc9ff]">Digital Craftsmanship</span>
-            </h1>
+            </motion.h1>
           </div>
 
-          <div className="w-full overflow-x-auto">
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 0.6 }}
+            viewport={{ once: true }}
+            className="w-full overflow-x-auto"
+          >
             <div className="flex flex-wrap sm:flex-nowrap gap-3 sm:gap-4 whitespace-nowrap items-center p-2">
               <ButtonCategory isActive text="All Projects" />
               <ButtonCategory text="Fintech" />
@@ -25,7 +46,7 @@ const OurWork = () => {
               <ButtonCategory text="Sports" />
               <ButtonCategory text="UMKM" />
             </div>
-          </div>
+          </motion.div>
         </div>
 
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
@@ -34,23 +55,32 @@ const OurWork = () => {
             desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, officiis?"
             img="/img/landing_photo.jpg"
             title="Nexus Anjg"
+            delay={0.7}
           />
           <CardProject
             category="E-COMMERCE"
             desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, officiis?"
             img="/img/landing_photo.jpg"
             title="Aura Luxury"
+            delay={0.8}
           />
           <CardProject
             category="CORPORATE"
             desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, officiis?"
             img="/img/landing_photo.jpg"
             title="Stellar Global"
+            delay={0.9}
           />
         </div>
 
         <div className="mt-6 grid grid-cols-1 lg:grid-cols-3 gap-4">
-          <div className="bg-[#131b2e] rounded-xl border lg:col-span-2 border-gray-800 shadow-lg overflow-hidden">
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="bg-[#131b2e] rounded-xl border lg:col-span-2 border-gray-800 shadow-lg overflow-hidden"
+          >
             <img
               src="/img/landing_photo.jpg"
               className="h-60 w-full object-cover object-center"
@@ -67,9 +97,15 @@ const OurWork = () => {
                 Inventore, recusandae eveniet.
               </p>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="bg-[#131b2e] rounded-xl border border-gray-800 shadow-lg overflow-hidden">
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="bg-[#131b2e] rounded-xl border border-gray-800 shadow-lg overflow-hidden"
+          >
             <img
               src="/img/landing_photo.jpg"
               className="h-60 w-full object-cover object-center"
@@ -83,7 +119,7 @@ const OurWork = () => {
                 Fugiat, quasi.
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

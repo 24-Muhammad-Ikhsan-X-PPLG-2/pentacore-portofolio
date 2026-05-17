@@ -1,17 +1,31 @@
 "use client";
 
-import React, { FC } from "react";
+import { FC } from "react";
+import { motion } from "motion/react";
 
 type CardProjectProps = {
   img: string;
   category: string;
   title: string;
   desc: string;
+  delay?: number;
 };
 
-const CardProject: FC<CardProjectProps> = ({ category, desc, img, title }) => {
+const CardProject: FC<CardProjectProps> = ({
+  category,
+  desc,
+  img,
+  title,
+  delay = 0.3,
+}) => {
   return (
-    <div className="w-full h-72 sm:h-80 md:h-96 lg:h-80 xl:h-96 rounded-xl bg-[#131b2e] border border-gray-800 shadow-lg overflow-hidden flex flex-col">
+    <motion.div
+      initial={{ y: 20, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{ duration: 1, delay }}
+      viewport={{ once: true }}
+      className="w-full h-72 sm:h-80 md:h-96 lg:h-80 xl:h-96 rounded-xl bg-[#131b2e] border border-gray-800 shadow-lg overflow-hidden flex flex-col"
+    >
       <img
         src={img}
         className="w-full h-28 sm:h-32 md:h-40 lg:h-40 xl:h-44 object-cover object-center"
@@ -28,7 +42,7 @@ const CardProject: FC<CardProjectProps> = ({ category, desc, img, title }) => {
           {desc}
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
