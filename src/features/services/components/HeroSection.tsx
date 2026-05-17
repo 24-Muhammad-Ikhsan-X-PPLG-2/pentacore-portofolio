@@ -1,10 +1,12 @@
 "use client";
 
+import { motion } from "motion/react";
+
 const HeroSection = () => {
   return (
     <section className="relative flex flex-col justify-center pt-28 pb-16 overflow-hidden bg-[#030b1d] px-4 sm:px-6 lg:px-8 text-white">
       {/* Gradient Glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(37,99,235,0.15),transparent_35%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(37,99,235,0.15),transparent_35%)] animate-pulse" />
 
       {/* Main Grid */}
       <div
@@ -45,20 +47,38 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 flex items-center py-10">
         <div className="max-w-3xl text-center md:text-left">
-          <p className="text-sm font-semibold tracking-[0.3em] text-[#c0c9fc]">
+          <motion.p
+            initial={{ y: -20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="text-sm font-semibold tracking-[0.3em] text-[#c0c9fc]"
+          >
             CORE CAPABILITIES
-          </p>
+          </motion.p>
 
-          <h1 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-black leading-tight">
+          <motion.h1
+            initial={{ x: -50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-black leading-tight"
+          >
             Engineering the next generation of{" "}
             <span className="text-[#c0c9fc]">digital excellence.</span>
-          </h1>
+          </motion.h1>
 
-          <p className="mt-6 max-w-2xl text-base sm:text-lg leading-relaxed text-white/60">
+          <motion.p
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="mt-6 max-w-2xl text-base sm:text-lg leading-relaxed text-white/60"
+          >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
             provident consectetur veniam deleniti, iure laborum. Nemo ab, odit
             perferendis nulla optio libero.
-          </p>
+          </motion.p>
         </div>
       </div>
     </section>

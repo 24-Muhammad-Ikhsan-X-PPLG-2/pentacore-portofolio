@@ -46,9 +46,9 @@ const RecentPortofolio = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 w-full items-start justify-items-center">
           <Card title="Nexus Analytics" />
 
-          <Card delay={1.5} title="Fitra" />
+          <Card delay={2} title="Fitra" />
 
-          <Card delay={2} title="Apa aja" />
+          <Card delay={2.5} title="Apa aja" />
         </div>
       </div>
     </section>
@@ -65,7 +65,7 @@ const Card: FC<CardProps> = ({ title, delay = 1 }) => {
     <motion.div
       initial={{ y: 50, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.5, delay: 1.5 * delay }}
+      transition={{ duration: 0.5, delay: 0.5 * delay }}
       viewport={{ once: true }}
       className="w-full max-w-sm"
     >

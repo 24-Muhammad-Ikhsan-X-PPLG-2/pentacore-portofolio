@@ -1,20 +1,26 @@
 "use client";
 
-import { ElementType, FC, useEffect, useState } from "react";
+import { ElementType, FC, ReactNode, useEffect, useState } from "react";
+import { motion } from "motion/react";
 
 type CardProps = {
   title: string;
-  Icon: ElementType;
+  Icon: any;
+  delay?: number;
 };
 
-const CardTech: FC<CardProps> = ({ Icon, title }) => {
+const CardTech: FC<CardProps> = ({ Icon, title, delay = 1 }) => {
   const [mount, setMount] = useState(false);
   useEffect(() => {
     setMount(true);
   }, []);
   if (!mount) return <></>;
   return (
-    <div
+    <motion.div
+      initial={{ y: 50, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{ duration: 1, delay: 0.5 * delay }}
+      viewport={{ once: true }}
       className="
             group
             rounded-2xl
@@ -36,7 +42,7 @@ const CardTech: FC<CardProps> = ({ Icon, title }) => {
 
         <p className="text-sm font-medium text-white/80">{title}</p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

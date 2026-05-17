@@ -1,6 +1,5 @@
 "use client";
 
-import { ElementType, FC } from "react";
 import {
   Box,
   Cloud,
@@ -10,12 +9,13 @@ import {
   Type,
 } from "lucide-react";
 import CardTech from "./CardTech";
+import { motion } from "motion/react";
 
 const TechStack = () => {
   return (
     <section className="relative overflow-hidden bg-[#030b1d] py-32 text-white">
       {/* Base Glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.08),transparent_40%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.08),transparent_40%)] animate-pulse" />
 
       {/* Vertical Blueprint Lines */}
       <div
@@ -57,22 +57,36 @@ const TechStack = () => {
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-6xl px-6">
         <div className="text-center">
-          <h2 className="text-5xl font-black tracking-tight">Our Tech Stack</h2>
+          <motion.h2
+            initial={{ y: -50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="text-5xl font-black tracking-tight"
+          >
+            Our Tech Stack
+          </motion.h2>
 
-          <p className="mx-auto mt-5 max-w-2xl text-lg text-white/60">
+          <motion.p
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            viewport={{ once: true }}
+            className="mx-auto mt-5 max-w-2xl text-lg text-white/60"
+          >
             We leverage industry-leading technologies to build resilient digital
             infrastructure.
-          </p>
+          </motion.p>
         </div>
 
         {/* Cards */}
         <div className="mt-20 grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-6">
-          <CardTech Icon={Type} title="TypeScript" />
-          <CardTech Icon={Box} title="React / Next.js" />
-          <CardTech Icon={Database} title="PostgreSQL" />
-          <CardTech Icon={Cloud} title="AWS / Azure" />
-          <CardTech Icon={SquareTerminal} title="Node.js" />
-          <CardTech Icon={Paintbrush} title="Tailwind CSS" />
+          <CardTech delay={1} Icon={Type} title="TypeScript" />
+          <CardTech delay={1.5} Icon={Box} title="React / Next.js" />
+          <CardTech delay={2} Icon={Database} title="PostgreSQL" />
+          <CardTech delay={2.5} Icon={Cloud} title="AWS / Azure" />
+          <CardTech delay={3} Icon={SquareTerminal} title="Node.js" />
+          <CardTech delay={3.5} Icon={Paintbrush} title="Tailwind CSS" />
         </div>
       </div>
     </section>

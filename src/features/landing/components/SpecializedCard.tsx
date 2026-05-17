@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 
 type SpecializedCardProps = {
   delay: number;
-  Icon: ElementType;
+  Icon: any;
   title: string;
   desc: string;
 };
