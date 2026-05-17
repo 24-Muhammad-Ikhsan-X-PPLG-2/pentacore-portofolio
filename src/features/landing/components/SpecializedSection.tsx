@@ -32,22 +32,19 @@ const SpecializedSection = () => {
           <SpecializedCard
             delay={1}
             Icon={Code}
-            desc="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id
-              architecto, illum officia quisquam dolorem unde?"
+            desc="Building modern, responsive, and high-performance websites tailored to business and user needs."
             title="Web Development"
           />
           <SpecializedCard
             delay={2}
             Icon={PencilRuler}
-            desc="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id
-              architecto, illum officia quisquam dolorem unde?"
+            desc="Designing clean and intuitive digital experiences that improve usability, engagement, and user satisfaction."
             title="UI/UX Design"
           />
           <SpecializedCard
             delay={3}
             Icon={MonitorSmartphone}
-            desc="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id
-              architecto, illum officia quisquam dolorem unde?"
+            desc="Creating functional and scalable mobile or web applications to support business growth and digital transformation."
             title="App Development"
           />
         </div>

@@ -2,7 +2,7 @@
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex flex-col justify-center pt-16 pb-16 overflow-hidden bg-[#030b1d] px-4 sm:px-6 lg:px-8 text-white">
+    <section className="relative flex flex-col justify-center pt-28 pb-16 overflow-hidden bg-[#030b1d] px-4 sm:px-6 lg:px-8 text-white">
       {/* Gradient Glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(37,99,235,0.15),transparent_35%)]" />
 
@@ -43,7 +43,7 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex min-h-screen items-center py-10">
+      <div className="relative z-10 flex items-center py-10">
         <div className="max-w-3xl text-center md:text-left">
           <p className="text-sm font-semibold tracking-[0.3em] text-[#c0c9fc]">
             CORE CAPABILITIES

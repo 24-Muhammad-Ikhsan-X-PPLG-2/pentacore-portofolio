@@ -25,11 +25,14 @@ const HeroSection = () => {
             </span>{" "}
             <span className="text-[#c0c9fc]">Digital Reality</span>
           </h1>
-          <p className="mt-7 leading-relaxed text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore,
-            voluptas dolorem tenetur nihil laudantium harum neque doloremque
-            veritatis perspiciatis amet, nisi architecto, vitae nobis veniam?
-            Veniam, nesciunt alias. Maxime, fuga.
+          <p className="mt-7 leading-relaxed text-base text-gray-300 max-w-2xl">
+            We are a digital agency focused on website design and development
+            for UMKM, F&B businesses, and educational institutions, delivering
+            modern, responsive, and high-performance websites tailored to each
+            client’s needs. We prioritize clear communication and close
+            collaboration to ensure every project is executed effectively and
+            aligns with the client’s vision, combining creativity, strategy, and
+            technology to help businesses grow online.
           </p>
           <div className="mt-7 flex flex-col sm:flex-row sm:items-center sm:gap-5 gap-4">
             <button className="w-full sm:w-auto px-7 py-3 rounded-lg font-semibold bg-[#024ef8] text-white hover:-translate-y-1 cursor-pointer transition duration-300 hover:shadow-[0_20px_60px_rgba(59,130,246,0.45)]">
@@ -46,7 +49,7 @@ const HeroSection = () => {
         </div>
         <div className="w-full flex justify-center lg:justify-end">
           <img
-            src="/img/landing_photo.jpg"
+            src="/img/landing_photo1.jpg"
             className="w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl rounded-lg shadow-xl"
             alt="Landing showcase"
           />

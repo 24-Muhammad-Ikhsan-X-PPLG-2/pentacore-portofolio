@@ -25,7 +25,7 @@ const RecentPortofolio = () => {
             viewport={{ once: true }}
             className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-black leading-tight mt-4"
           >
-            Recent Portofolio
+            Recent Catalog
           </motion.h1>
           <motion.p
             initial={{ x: 50, opacity: 0 }}
@@ -46,7 +46,7 @@ const RecentPortofolio = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 w-full items-start justify-items-center">
           <Card title="Nexus Analytics" />
 
-          <Card delay={1.5} title="Barra PMO" />
+          <Card delay={1.5} title="Fitra" />
 
           <Card delay={2} title="Apa aja" />
         </div>
