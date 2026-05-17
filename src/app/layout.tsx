@@ -24,8 +24,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${InterFont.variable} ${InterFont.className} h-full antialiased`}
+      className={`${InterFont.variable} ${InterFont.className} h-full antialiased scroll-smooth`}
       suppressHydrationWarning
+      data-scroll-behavior="smooth"
     >
       <body
         className="min-h-full flex flex-col overflow-x-hidden"

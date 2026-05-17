@@ -28,9 +28,8 @@ const Advantage = () => {
                   Technical Superiority
                 </h2>
                 <p className="text-gray-400 text-sm sm:text-base">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Excepturi, amet facere animi maiores soluta ab cumque fuga
-                  quisquam eveniet quasi!
+                  We build fast, responsive, and scalable websites using modern
+                  technologies to ensure smooth performance across all devices.
                 </p>
               </div>
             </div>
@@ -43,9 +42,8 @@ const Advantage = () => {
                   Data-Driven Strategy
                 </h2>
                 <p className="text-gray-400 text-sm sm:text-base">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Excepturi, amet facere animi maiores soluta ab cumque fuga
-                  quisquam eveniet quasi!
+                  Every design and development decision is focused on improving
+                  user experience, engagement, and business growth.
                 </p>
               </div>
             </div>
@@ -58,9 +56,8 @@ const Advantage = () => {
                   Agile Execution
                 </h2>
                 <p className="text-gray-400 text-sm sm:text-base">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Excepturi, amet facere animi maiores soluta ab cumque fuga
-                  quisquam eveniet quasi!
+                  From planning to launch, we maintain clear communication and
+                  efficient workflows to deliver projects on time.
                 </p>
               </div>
             </div>

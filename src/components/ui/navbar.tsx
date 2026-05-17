@@ -3,6 +3,7 @@
 import { FC, useState } from "react";
 import NavLinks from "./NavLinks";
 import NavbarMobile from "./NavbarMobile";
+import Link from "next/link";
 
 type NavbarProps = {
   currentPage?: string;
@@ -27,9 +28,11 @@ const Navbar: FC<NavbarProps> = ({ currentPage = "home" }) => {
 
           {/* Desktop CTA */}
           <div className="hidden md:block">
-            <button className="px-7 py-2.5 font-semibold text-sm cursor-pointer hover:-translate-y-1 transition duration-300 hover:shadow-[0_20px_60px_rgba(59,130,246,0.45)] bg-[#024ef8] text-white rounded-xl">
-              Start Project
-            </button>
+            <Link href={"/contact"}>
+              <button className="px-7 py-2.5 font-semibold text-sm cursor-pointer hover:-translate-y-1 transition duration-300 hover:shadow-[0_20px_60px_rgba(59,130,246,0.45)] bg-[#024ef8] text-white rounded-xl">
+                Start Project
+              </button>
+            </Link>
           </div>
 
           {/* Mobile hamburger */}

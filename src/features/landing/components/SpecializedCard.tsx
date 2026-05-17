@@ -1,6 +1,6 @@
 "use client";
 
-import { ElementType, FC } from "react";
+import { FC } from "react";
 import { motion } from "motion/react";
 
 type SpecializedCardProps = {

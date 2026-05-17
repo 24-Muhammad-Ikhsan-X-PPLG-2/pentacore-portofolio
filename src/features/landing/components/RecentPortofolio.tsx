@@ -6,7 +6,10 @@ import { FC } from "react";
 
 const RecentPortofolio = () => {
   return (
-    <section className="py-16 md:py-24 lg:py-30 flex flex-col justify-center items-center text-white px-4 sm:px-6 md:px-10 bg-[#0b1326]">
+    <section
+      id="recent-catalog"
+      className="py-16 md:py-24 lg:py-30 flex flex-col justify-center items-center text-white px-4 sm:px-6 md:px-10 bg-[#0b1326]"
+    >
       <div className="w-full max-w-7xl">
         <motion.p
           initial={{ y: 20, opacity: 0 }}

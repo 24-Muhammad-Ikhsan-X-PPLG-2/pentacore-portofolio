@@ -2,6 +2,7 @@
 
 import { ArrowRight } from "lucide-react";
 import { motion } from "motion/react";
+import Link from "next/link";
 
 const HeroSection = () => {
   return (
@@ -35,16 +36,22 @@ const HeroSection = () => {
             technology to help businesses grow online.
           </p>
           <div className="mt-7 flex flex-col sm:flex-row sm:items-center sm:gap-5 gap-4">
-            <button className="w-full sm:w-auto px-7 py-3 rounded-lg font-semibold bg-[#024ef8] text-white hover:-translate-y-1 cursor-pointer transition duration-300 hover:shadow-[0_20px_60px_rgba(59,130,246,0.45)]">
-              Get Started
-            </button>
-            <button className="w-full sm:w-auto px-7 py-3 rounded-lg flex items-center justify-center sm:justify-start gap-2 font-semibold bg-transparent border border-gray-300 transition-all cursor-pointer group duration-300 text-gray-300 hover:text-white">
+            <Link href={"/contact"}>
+              <button className="w-full sm:w-auto px-7 py-3 rounded-lg font-semibold bg-[#024ef8] text-white hover:-translate-y-1 cursor-pointer transition duration-300 hover:shadow-[0_20px_60px_rgba(59,130,246,0.45)]">
+                Get Started
+              </button>
+            </Link>
+
+            <a
+              href="#recent-catalog"
+              className="w-full sm:w-auto px-7 py-3 rounded-lg flex items-center justify-center sm:justify-start gap-2 font-semibold bg-transparent border border-gray-300 transition-all cursor-pointer group duration-300 text-gray-300 hover:text-white"
+            >
               View Our Work{" "}
               <ArrowRight
                 className="group-hover:translate-x-2 transition-transform duration-300"
                 size={16}
               />
-            </button>
+            </a>
           </div>
         </div>
         <div className="w-full flex justify-center lg:justify-end">
