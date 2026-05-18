@@ -51,10 +51,8 @@ const AppDevelopment = () => {
           viewport={{ once: true }}
           className="mt-6 font-light text-sm sm:text-base leading-relaxed text-white/75 max-w-2xl"
         >
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa
-          consequuntur, ipsam dolore ullam labore fugiat reprehenderit cumque
-          animi id veritatis sapiente, accusantium aut libero illo. Dolores
-          deserunt beatae non voluptas!
+          We build fast, scalable, and intuitive mobile applications designed
+          for modern users and growing businesses.
         </motion.p>
         <ul className="list-disc mt-6 pl-5 flex flex-col gap-2">
           <motion.li
@@ -63,7 +61,7 @@ const AppDevelopment = () => {
             transition={{ duration: 0.5, delay: 1 }}
             viewport={{ once: true }}
           >
-            Biometric Authentication Integration
+            Cross-platform iOS & Android Development
           </motion.li>
           <motion.li
             initial={{ y: 20, opacity: 0 }}
@@ -71,7 +69,7 @@ const AppDevelopment = () => {
             transition={{ duration: 0.5, delay: 1.1 }}
             viewport={{ once: true }}
           >
-            Real-time Data Synchronization
+            Real-time Data & API Integration
           </motion.li>
           <motion.li
             initial={{ y: 20, opacity: 0 }}
@@ -79,7 +77,7 @@ const AppDevelopment = () => {
             transition={{ duration: 0.5, delay: 1.2 }}
             viewport={{ once: true }}
           >
-            Push Notification Strategies
+            Secure Authentication & Cloud Sync
           </motion.li>
         </ul>
         <motion.a

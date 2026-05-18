@@ -75,9 +75,10 @@ const HeroSection = () => {
             viewport={{ once: true }}
             className="mt-6 max-w-2xl text-base sm:text-lg leading-relaxed text-white/60"
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-            provident consectetur veniam deleniti, iure laborum. Nemo ab, odit
-            perferendis nulla optio libero.
+            We provide complete digital solutions to help businesses grow
+            online, especially for SMEs, F&B brands, and educational
+            institutions. Our focus is on building modern, fast, and
+            user-friendly digital experiences.
           </motion.p>
         </div>
       </div>

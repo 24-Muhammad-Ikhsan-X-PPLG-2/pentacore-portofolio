@@ -38,10 +38,8 @@ const UiUxDesign = () => {
           viewport={{ once: true }}
           className="mt-6 font-light text-sm sm:text-base leading-relaxed text-white/75 max-w-2xl"
         >
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa
-          consequuntur, ipsam dolore ullam labore fugiat reprehenderit cumque
-          animi id veritatis sapiente, accusantium aut libero illo. Dolores
-          deserunt beatae non voluptas!
+          We craft intuitive digital experiences that help your users move
+          faster, stay engaged, and love your product.
         </motion.p>
         <div className="flex flex-col mt-5 gap-4">
           <motion.div
@@ -52,11 +50,11 @@ const UiUxDesign = () => {
             className="flex flex-col border-l-4 pl-4 py-4 border-white"
           >
             <h2 className="text-xl sm:text-2xl font-bold">
-              Emphathetic Discovery
+              User-Centered Research
             </h2>
             <p className="text-sm sm:text-base font-light mt-1 leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Similique, quibusdam!
+              Understand user behavior through research, insights, and usability
+              testing.
             </p>
           </motion.div>
           <motion.div
@@ -66,11 +64,11 @@ const UiUxDesign = () => {
             className="flex flex-col border-l-4 pl-4 py-4 border-gray-800"
           >
             <h2 className="text-xl sm:text-2xl font-bold">
-              Emphathetic Discovery
+              Modern Interface Design
             </h2>
             <p className="text-sm sm:text-base font-light mt-1 leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Similique, quibusdam!
+              Beautiful and scalable interfaces designed for clarity and
+              conversion.
             </p>
           </motion.div>
         </div>

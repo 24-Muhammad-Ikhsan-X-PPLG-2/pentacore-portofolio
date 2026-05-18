@@ -1,6 +1,12 @@
 "use client";
 
-import { Code, HardDrive, Server, ShoppingBag, Utensils } from "lucide-react";
+import {
+  Code,
+  Database,
+  MonitorSmartphone,
+  Network,
+  Search,
+} from "lucide-react";
 import { motion } from "motion/react";
 
 const CustomWebDevelopment = () => {
@@ -51,10 +57,9 @@ const CustomWebDevelopment = () => {
           viewport={{ once: true }}
           className="mt-6 font-light text-sm sm:text-base leading-relaxed text-white/75 max-w-2xl"
         >
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa
-          consequuntur, ipsam dolore ullam labore fugiat reprehenderit cumque
-          animi id veritatis sapiente, accusantium aut libero illo. Dolores
-          deserunt beatae non voluptas!
+          We build responsive and high-performance websites tailored to your
+          business needs. From company profiles to full business websites,
+          everything is optimized for speed, SEO, and user experience.
         </motion.p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
           <div className="flex flex-col gap-4">
@@ -65,8 +70,8 @@ const CustomWebDevelopment = () => {
               viewport={{ once: true }}
               className="flex items-center gap-2"
             >
-              <Server size={20} color="white" />
-              <p className="font-semibold">Microservices</p>
+              <MonitorSmartphone size={20} color="white" />
+              <p className="font-semibold">Responsive Web Design</p>
             </motion.div>
             <motion.div
               initial={{ y: 20, opacity: 0 }}
@@ -75,8 +80,8 @@ const CustomWebDevelopment = () => {
               viewport={{ once: true }}
               className="flex items-center gap-2"
             >
-              <Utensils size={20} color="white" />
-              <p className="font-semibold">F&B</p>
+              <Search size={20} color="white" />
+              <p className="font-semibold">SEO Optimization</p>
             </motion.div>
           </div>
           <div className="flex flex-col gap-4">
@@ -87,8 +92,8 @@ const CustomWebDevelopment = () => {
               viewport={{ once: true }}
               className="flex items-center gap-2"
             >
-              <HardDrive size={20} color="white" />
-              <p className="font-semibold">Cloud Architecture</p>
+              <Database size={20} color="white" />
+              <p className="font-semibold">API & Database Integration</p>
             </motion.div>
             <motion.div
               initial={{ y: 20, opacity: 0 }}
@@ -97,8 +102,8 @@ const CustomWebDevelopment = () => {
               viewport={{ once: true }}
               className="flex items-center gap-2"
             >
-              <ShoppingBag size={20} color="white" />
-              <p className="font-semibold">E-Commerce</p>
+              <Network size={20} color="white" />
+              <p className="font-semibold">Scalable Architecture</p>
             </motion.div>
           </div>
         </div>
