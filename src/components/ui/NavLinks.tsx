@@ -70,13 +70,13 @@ const NavLinks: FC<LinksProps> = ({
       </div>
 
       <div className={mobile ? "mb-2" : "flex flex-col gap-1"}>
-        <a
-          href=""
+        <Link
+          href="/about"
           className={`${baseLinkClasses} ${getClassActivePage("about")}`}
           onClick={onLinkClick}
         >
           About
-        </a>
+        </Link>
         {isActivePage("about") ? (
           <div className="h-0.5 w-full bg-white"></div>
         ) : null}
