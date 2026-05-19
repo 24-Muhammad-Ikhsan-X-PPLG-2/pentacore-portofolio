@@ -9,21 +9,28 @@ import {
   Search,
 } from "lucide-react";
 import { motion } from "motion/react";
+import Image from "next/image";
 
 const CustomWebDevelopment = () => {
   const { isVisible, ref } = useInView();
   return (
-    <div ref={ref} className="flex flex-col md:flex-row items-center gap-6">
+    <div
+      ref={ref}
+      id="web-development"
+      className="flex flex-col md:flex-row items-center gap-6 pt-25"
+    >
       <motion.div
         initial={{ x: -50, opacity: 0 }}
         animate={{ x: isVisible ? 0 : -50, opacity: isVisible ? 1 : 0 }}
         transition={{ duration: 1 }}
         className="w-full md:w-1/2 h-90 sm:h-105 rounded-xl p-4 sm:p-6 shadow-lg bg-[#171f32]"
       >
-        <img
-          src="/img/landing_photo.jpg"
+        <Image
+          width={1024}
+          height={960}
+          src="/img/web.webp"
           className="w-full h-full rounded-xl object-cover"
-          alt=""
+          alt="Web Development"
         />
       </motion.div>
       <motion.div

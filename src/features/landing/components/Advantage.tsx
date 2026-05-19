@@ -85,7 +85,7 @@ const Advantage = () => {
             </div>
             <div className="bg-[#171f32] rounded-xl flex flex-col items-center justify-center p-4">
               <h4 className="text-2xl sm:text-3xl md:text-4xl text-[#c0c9fc] font-semibold">
-                150+
+                50+
               </h4>
               <p className="mt-2 text-xs sm:text-sm font-medium text-gray-400 text-center">
                 APPS SHIPPED

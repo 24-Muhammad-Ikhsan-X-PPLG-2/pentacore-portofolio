@@ -4,6 +4,7 @@ import { FC, useState } from "react";
 import NavLinks from "./NavLinks";
 import NavbarMobile from "./NavbarMobile";
 import Link from "next/link";
+import { X } from "lucide-react";
 
 type NavbarProps = {
   currentPage?: string;
@@ -39,42 +40,52 @@ const Navbar: FC<NavbarProps> = ({ currentPage = "home" }) => {
 
           {/* Mobile hamburger */}
           <div className="md:hidden flex items-center">
-            <button
-              onClick={() => setOpen(true)}
-              aria-label="Open menu"
-              aria-expanded={open}
-              className="p-2 rounded-md text-white hover:bg-white/5"
-            >
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+            {open ? (
+              <button
+                aria-label="Open menu"
+                aria-expanded={open}
+                className="p-2 rounded-md text-white hover:bg-white/5"
               >
-                <path
-                  d="M4 6H20"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M4 12H20"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M4 18H20"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
+                <X size={24} color="white" />
+              </button>
+            ) : (
+              <button
+                onClick={() => setOpen(true)}
+                aria-label="Open menu"
+                aria-expanded={open}
+                className="p-2 rounded-md text-white hover:bg-white/5"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4 6H20"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M4 12H20"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M4 18H20"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </button>
+            )}
           </div>
         </div>
       </nav>

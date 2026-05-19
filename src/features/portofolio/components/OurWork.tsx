@@ -34,7 +34,7 @@ const OurWork = () => {
             </motion.h1>
           </div>
 
-          <motion.div
+          {/* <motion.div
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: isVisible ? 0 : 20, opacity: isVisible ? 1 : 0 }}
             transition={{ duration: 1, delay: 0.6 }}
@@ -48,33 +48,35 @@ const OurWork = () => {
               <ButtonCategory text="Sports" />
               <ButtonCategory text="UMKM" />
             </div>
-          </motion.div>
+          </motion.div> */}
         </div>
 
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
           <CardProject
             isVisible={isVisible}
-            category="FINTECH"
-            desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, officiis?"
-            img="/img/landing_photo.jpg"
-            title="Nexus Anjg"
+            category="CORPORATE"
+            desc="SwasthaRaksha is an ID-Scanner app that also monitor and record transactions. Aimed to restrict adolescents tobacco access in Indonesia, helping to create a healthy generation for a golden Nation."
+            img="/projects/swastha.webp"
+            title="Swastha Raksa"
             delay={0.7}
+            href="https://swastha-raksa.vercel.app/"
           />
           <CardProject
             isVisible={isVisible}
-            category="E-COMMERCE"
-            desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, officiis?"
-            img="/img/landing_photo.jpg"
-            title="Aura Luxury"
+            category="Islamic FinTech Tool"
+            desc="Fitra is a precise financial tool designed to simplify Zakat calculations."
+            img="/projects/fitra.webp"
+            title="Fitra"
             delay={0.8}
           />
           <CardProject
             isVisible={isVisible}
-            category="CORPORATE"
-            desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, officiis?"
-            img="/img/landing_photo.jpg"
-            title="Stellar Global"
+            category="Organization Website"
+            desc="A modern and responsive portal for school student organizations to manage activities and information."
+            img="/projects/mpk.webp"
+            title="MPK"
             delay={0.9}
+            href="https://mpk-letris.vercel.app/"
           />
         </div>
 
@@ -86,19 +88,25 @@ const OurWork = () => {
             className="bg-[#131b2e] rounded-xl border lg:col-span-2 border-gray-800 shadow-lg overflow-hidden"
           >
             <img
-              src="/img/landing_photo.jpg"
+              src="/projects/wikiarticle.webp"
               className="h-60 w-full object-cover object-center"
               alt=""
             />
             <div className="p-4">
-              <p className="text-[#bbc9ff] font-semibold text-sm">
-                DATA VISUALIZATION
-              </p>
-              <h1 className="text-2xl font-bold mt-2">Omni-Insight Engine</h1>
+              <div className="flex justify-between items-center w-full">
+                <p className="text-[#bbc9ff] font-semibold text-sm">
+                  Knowledge Base Platform
+                </p>
+                <div className="bg-gray-800 px-3 py-1.5 text-xs rounded-full font-semibold flex items-center gap-2">
+                  <div className="size-3 bg-yellow-500 rounded-full"></div>
+                  <p>Ongoing Project</p>
+                </div>
+              </div>
+
+              <h1 className="text-2xl font-bold mt-2">Wikiarticle</h1>
               <p className="mt-2 font-light">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga
-                minus dolor consequuntur sint ea at, obcaecati dolorum!
-                Inventore, recusandae eveniet.
+                WikiArticle is a fast, minimalist, and modern platform built for
+                seamless knowledge sharing
               </p>
             </div>
           </motion.div>
@@ -110,16 +118,24 @@ const OurWork = () => {
             className="bg-[#131b2e] rounded-xl border border-gray-800 shadow-lg overflow-hidden"
           >
             <img
-              src="/img/landing_photo.jpg"
+              src="/projects/manga.webp"
               className="h-60 w-full object-cover object-center"
               alt=""
             />
             <div className="p-4">
-              <p className="text-[#bbc9ff] font-semibold text-sm">UMKM</p>
-              <h1 className="text-2xl font-bold mt-2">Barra Cake</h1>
+              <div className="flex justify-between items-center w-full">
+                <p className="text-[#bbc9ff] font-semibold text-sm">
+                  Mobile Application
+                </p>
+                <div className="bg-gray-800 px-3 py-1.5 text-xs rounded-full font-semibold flex items-center gap-2">
+                  <div className="size-3 bg-yellow-500 rounded-full"></div>
+                  <p>Ongoing Project</p>
+                </div>
+              </div>
+              <h1 className="text-2xl font-bold mt-2">Zentora</h1>
               <p className="mt-2 font-light">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Fugiat, quasi.
+                Zentora is a fast, clean, and modern manga reader web
+                application designed for an immersive reading experience.
               </p>
             </div>
           </motion.div>

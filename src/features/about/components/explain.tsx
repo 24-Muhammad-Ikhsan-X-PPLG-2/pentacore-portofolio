@@ -86,7 +86,7 @@ const ExplainSection = () => {
           className="col-span-3 order-1 lg:order-2"
         >
           <img
-            src="/img/landing_photo.jpg"
+            src="/img/how-we-work.webp"
             className="w-full h-64 sm:h-80 md:h-96 lg:h-full object-cover object-center"
             alt=""
           />

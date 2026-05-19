@@ -2,6 +2,7 @@
 
 import useInView from "@/hooks/useInView";
 import { motion } from "motion/react";
+import Link from "next/link";
 
 const CTA = () => {
   const { isVisible, ref } = useInView();
@@ -24,14 +25,16 @@ const CTA = () => {
             Our engineering team is ready to scale your vision
           </p>
         </motion.div>
-        <motion.button
-          initial={{ x: 50, opacity: 0 }}
-          animate={{ x: isVisible ? 0 : 50, opacity: isVisible ? 1 : 0 }}
-          transition={{ duration: 1, delay: 0.5 }}
-          className="bg-gray-900 px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg font-semibold text-sm sm:text-base whitespace-nowrap hover:bg-gray-800 transition-colors"
-        >
-          Schedule a Consultion
-        </motion.button>
+        <Link href={"/contact"}>
+          <motion.button
+            initial={{ x: 50, opacity: 0 }}
+            animate={{ x: isVisible ? 0 : 50, opacity: isVisible ? 1 : 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            className="bg-gray-900 px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg font-semibold text-sm sm:text-base whitespace-nowrap cursor-pointer hover:bg-gray-800 transition-colors"
+          >
+            Schedule a Consultion
+          </motion.button>
+        </Link>
       </div>
     </section>
   );

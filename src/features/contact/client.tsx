@@ -45,7 +45,8 @@ const ContactClient = () => {
                         HQ Office
                       </p>
                       <p className="mt-1 text-sm leading-relaxed">
-                        1201 Innovation Way, Suite 400 Silicon Valley, CA 94043
+                        Jl. Pd. Salak No.109, Pd. Benda, Kec. Pamulang, Kota
+                        Tangerang Selatan, Banten 15416, Indonesia
                       </p>
                     </div>
                   </div>
@@ -56,7 +57,7 @@ const ContactClient = () => {
                         Inquiries
                       </p>
                       <p className="mt-1 text-sm leading-relaxed">
-                        pentacore.labs@gmail.com
+                        pentacorelabs@gmail.com
                       </p>
                     </div>
                   </div>
@@ -67,16 +68,28 @@ const ContactClient = () => {
                         Media Social
                       </p>
                       <p className="mt-1 text-sm leading-relaxed flex flex-wrap gap-2 text-gray-200">
-                        <a href="#" className="hover:underline">
+                        <a
+                          href="https://www.instagram.com/pentacore.labs"
+                          target="_blank"
+                          className="hover:underline"
+                        >
                           Instagram
                         </a>
                         <span className="text-gray-700">/</span>
-                        <a href="#" className="hover:underline">
+                        <a
+                          href="https://github.com/pentacorelabs"
+                          target="_blank"
+                          className="hover:underline"
+                        >
                           GitHub
                         </a>
                         <span className="text-gray-700">/</span>
-                        <a href="#" className="hover:underline">
-                          Twitter
+                        <a
+                          href="https://x.com/PENTACORE_LABS"
+                          target="_blank"
+                          className="hover:underline"
+                        >
+                          X (Twitter)
                         </a>
                       </p>
                     </div>

@@ -3,13 +3,15 @@
 import useInView from "@/hooks/useInView";
 import { Palette } from "lucide-react";
 import { motion } from "motion/react";
+import Image from "next/image";
 
 const UiUxDesign = () => {
   const { isVisible, ref } = useInView();
   return (
     <div
       ref={ref}
-      className="flex flex-col md:flex-row items-center gap-6 mt-12 px-4 sm:px-6 lg:px-0"
+      id="ui-ux-design"
+      className="flex pt-25 flex-col md:flex-row items-center gap-6 mt-12 px-4 sm:px-6 lg:px-0"
     >
       <motion.div
         initial={{ x: -50, opacity: 0 }}
@@ -79,10 +81,12 @@ const UiUxDesign = () => {
         transition={{ duration: 1, delay: 0.5 }}
         className="w-full order-1 md:order-2 md:w-1/2 h-72 sm:h-96 rounded-xl p-4 sm:p-6 shadow-lg bg-[#171f32]"
       >
-        <img
-          src="/img/landing_photo.jpg"
+        <Image
+          width={1024}
+          height={960}
+          src="/img/design.webp"
           className="w-full h-full rounded-xl object-cover"
-          alt=""
+          alt="UI/UX Image"
         />
       </motion.div>
     </div>

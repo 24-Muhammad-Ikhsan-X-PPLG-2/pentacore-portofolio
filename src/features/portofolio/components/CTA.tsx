@@ -3,6 +3,7 @@
 import useInView from "@/hooks/useInView";
 import { Pentagon } from "lucide-react";
 import { motion } from "motion/react";
+import Link from "next/link";
 
 const CTA = () => {
   const { isVisible, ref } = useInView();
@@ -22,12 +23,16 @@ const CTA = () => {
             Ready to engineer your next digital breakthrough?
           </h1>
           <div className="mt-6 flex flex-col sm:flex-row sm:flex-wrap gap-4">
-            <button className="w-full sm:w-auto bg-white font-semibold text-[#0052fe] px-6 py-3 rounded-xl cursor-pointer text-center">
-              Schedule a Strategy Session
-            </button>
-            <button className="w-full sm:w-auto bg-transparent text-white border border-white px-6 py-3 rounded-xl cursor-pointer font-semibold text-center">
-              Download Capabilities
-            </button>
+            <Link href={"/contact"}>
+              <button className="w-full sm:w-auto bg-white font-semibold text-[#0052fe] px-6 py-3 rounded-xl cursor-pointer text-center">
+                Consult Now
+              </button>
+            </Link>
+            <Link href={"/services"}>
+              <button className="w-full sm:w-auto bg-transparent text-white border border-white px-6 py-3 rounded-xl cursor-pointer font-semibold text-center">
+                Explore Services
+              </button>
+            </Link>
           </div>
         </div>
 

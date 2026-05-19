@@ -2,6 +2,7 @@
 
 import { FC, useEffect, useRef } from "react";
 import NavLinks from "./NavLinks";
+import Link from "next/link";
 
 type NavbarMobileProps = {
   open: boolean;
@@ -58,9 +59,11 @@ const NavbarMobile: FC<NavbarMobileProps> = ({
             mobile
           />
           <div className="mt-6">
-            <button className="w-full px-4 py-3 font-semibold text-sm bg-[#024ef8] text-white rounded-xl">
-              Start Project
-            </button>
+            <Link href={"/contact"}>
+              <button className="w-full px-4 py-3 font-semibold text-sm bg-[#024ef8] text-white rounded-xl">
+                Start Project
+              </button>
+            </Link>
           </div>
         </div>
       </aside>

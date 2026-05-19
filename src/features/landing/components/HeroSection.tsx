@@ -50,7 +50,7 @@ const HeroSection = () => {
               href="#recent-catalog"
               className="w-full sm:w-auto px-7 py-3 rounded-lg flex items-center justify-center sm:justify-start gap-2 font-semibold bg-transparent border border-gray-300 transition-all cursor-pointer group duration-300 text-gray-300 hover:text-white"
             >
-              View Our Work{" "}
+              View Our Services{" "}
               <ArrowRight
                 className="group-hover:translate-x-2 transition-transform duration-300"
                 size={16}

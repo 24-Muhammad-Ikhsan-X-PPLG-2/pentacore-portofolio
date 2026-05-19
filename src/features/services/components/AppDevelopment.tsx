@@ -3,13 +3,15 @@
 import useInView from "@/hooks/useInView";
 import { MoveRight, Smartphone } from "lucide-react";
 import { motion } from "motion/react";
+import Image from "next/image";
 
 const AppDevelopment = () => {
   const { isVisible, ref } = useInView();
   return (
     <div
       ref={ref}
-      className="flex flex-col md:flex-row items-center gap-6 mt-12 px-4 sm:px-6 lg:px-0"
+      id="app-development"
+      className="flex pt-25 pb-25 flex-col md:flex-row items-center gap-6 mt-12 px-4 sm:px-6 lg:px-0"
     >
       <motion.div
         initial={{ x: -50, opacity: 0 }}
@@ -17,10 +19,12 @@ const AppDevelopment = () => {
         transition={{ duration: 1 }}
         className="w-full md:w-1/2 h-72 sm:h-96 rounded-xl p-4 sm:p-6 shadow-lg bg-[#171f32]"
       >
-        <img
-          src="/img/landing_photo.jpg"
+        <Image
+          width={1024}
+          height={960}
+          src="/img/mobile.webp"
           className="w-full h-full rounded-xl object-cover"
-          alt=""
+          alt="App Development Image"
         />
       </motion.div>
       <motion.div
@@ -77,7 +81,7 @@ const AppDevelopment = () => {
             Secure Authentication & Cloud Sync
           </motion.li>
         </ul>
-        <motion.a
+        {/* <motion.a
           initial={{ x: 20, opacity: 0 }}
           animate={{ x: isVisible ? 0 : 20, opacity: isVisible ? 1 : 0 }}
           transition={{ duration: 0.5, delay: 1.3 }}
@@ -85,7 +89,7 @@ const AppDevelopment = () => {
           className="flex items-center gap-2 mt-4 text-[#c0c9fc] hover:underline"
         >
           Explore our mobile process <MoveRight size={20} color="white" />
-        </motion.a>
+        </motion.a> */}
       </motion.div>
     </div>
   );

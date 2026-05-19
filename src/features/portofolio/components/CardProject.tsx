@@ -10,6 +10,8 @@ type CardProjectProps = {
   desc: string;
   delay?: number;
   isVisible: boolean;
+  href?: string;
+  onGoing?: boolean;
 };
 
 const CardProject: FC<CardProjectProps> = ({
@@ -19,6 +21,8 @@ const CardProject: FC<CardProjectProps> = ({
   title,
   delay = 0.3,
   isVisible,
+  href = "#",
+  onGoing = false,
 }) => {
   return (
     <motion.div
@@ -35,12 +39,29 @@ const CardProject: FC<CardProjectProps> = ({
       />
       <div className="p-3 sm:p-4 md:p-5 flex-1 flex flex-col">
         <div>
-          <p className="text-[#bbc9ff] font-semibold text-sm">{category}</p>
-          <h1 className="text-2xl font-bold mt-1 sm:mt-2 line-clamp-2">
-            {title}
-          </h1>
+          <div className="flex justify-between items-center w-full">
+            <p className="text-[#bbc9ff] font-semibold text-sm">{category}</p>
+            <div className="bg-gray-800 px-3 py-1.5 text-xs rounded-full font-semibold flex items-center gap-2">
+              {onGoing ? (
+                <>
+                  <div className="size-3 bg-blue-500 rounded-full"></div>
+                  <p>Ongoing Project</p>
+                </>
+              ) : (
+                <>
+                  <div className="size-3 bg-green-500 rounded-full"></div>
+                  <p>Completed Project</p>
+                </>
+              )}
+            </div>
+          </div>
+          <a href={href} target="_blank">
+            <h1 className="text-2xl hover:underline font-bold mt-1 sm:mt-2 line-clamp-2">
+              {title}
+            </h1>
+          </a>
         </div>
-        <p className="text-base text-gray-300 font-light mt-2 line-clamp-2">
+        <p className="text-base text-gray-300 font-light mt-2 line-clamp-3">
           {desc}
         </p>
       </div>
