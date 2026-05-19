@@ -1,17 +1,21 @@
 "use client";
 
+import useInView from "@/hooks/useInView";
 import { ArrowRight } from "lucide-react";
 import { motion } from "motion/react";
 import Link from "next/link";
 
 const HeroSection = () => {
+  const { ref, isVisible } = useInView();
   return (
-    <section className="pb-15 pt-35 text-white bg-[#0b1326] px-6 md:px-10 xl:px-20 flex justify-center items-center">
+    <section
+      ref={ref}
+      className="pb-15 pt-35 text-white bg-[#0b1326] px-6 md:px-10 xl:px-20 flex justify-center items-center"
+    >
       <motion.div
-        initial={{ y: 20, opacity: 0 }}
+        initial={{ y: 50, opacity: 0 }}
         transition={{ duration: 1 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        viewport={{ once: true }}
+        animate={{ y: isVisible ? 0 : 50, opacity: isVisible ? 1 : 0 }}
         className="flex flex-col lg:flex-row justify-center items-center gap-12"
       >
         <div className="w-full max-w-3xl lg:max-w-2xl">

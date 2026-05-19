@@ -1,17 +1,21 @@
 "use client";
 
+import useInView from "@/hooks/useInView";
 import { BadgeCheck, Rocket, Table2 } from "lucide-react";
 import { motion } from "motion/react";
 
 const Advantage = () => {
+  const { ref, isVisible } = useInView();
   return (
-    <section className="bg-[#131b2e] overflow-hidden py-12 md:py-16 lg:py-24 px-4 sm:px-6 lg:px-8 text-white">
+    <section
+      ref={ref}
+      className="bg-[#131b2e] overflow-hidden py-12 md:py-16 lg:py-24 px-4 sm:px-6 lg:px-8 text-white"
+    >
       <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row gap-8 items-start lg:items-center">
         <motion.div
           initial={{ x: -50, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
+          animate={{ x: isVisible ? 0 : 1, opacity: isVisible ? 1 : 0 }}
           transition={{ duration: 1 }}
-          viewport={{ once: true }}
           className="w-full lg:w-1/2"
         >
           <p className="text-[#c0c9fc] text-sm font-semibold">THE ADVANTAGE</p>
@@ -66,9 +70,8 @@ const Advantage = () => {
 
         <motion.div
           initial={{ x: 50, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
+          animate={{ x: isVisible ? 0 : 50, opacity: isVisible ? 1 : 0 }}
           transition={{ duration: 1, delay: 1 }}
-          viewport={{ once: true }}
           className="w-full lg:w-1/2 bg-[#0b1326] p-4 sm:p-6 md:p-8 rounded-xl"
         >
           <div className="grid grid-cols-2 gap-4">

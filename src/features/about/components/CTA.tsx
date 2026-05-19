@@ -1,14 +1,19 @@
 "use client";
 
+import useInView from "@/hooks/useInView";
 import { Pentagon } from "lucide-react";
 import { motion } from "motion/react";
 
 const CTA = () => {
+  const { isVisible, ref } = useInView();
   return (
-    <section className="pb-16 px-4 sm:px-6 lg:px-8 bg-[#0f1a35] flex justify-center text-white">
+    <section
+      ref={ref}
+      className="pb-16 px-4 sm:px-6 lg:px-8 bg-[#0f1a35] flex justify-center text-white"
+    >
       <motion.div
         initial={{ scale: 0 }}
-        whileInView={{ scale: 1 }}
+        animate={{ scale: isVisible ? 1 : 0 }}
         viewport={{ once: true }}
         className="w-full max-w-6xl bg-[#0052fe] rounded-2xl py-8 px-6 sm:px-10 flex flex-col lg:flex-row items-center gap-8"
       >

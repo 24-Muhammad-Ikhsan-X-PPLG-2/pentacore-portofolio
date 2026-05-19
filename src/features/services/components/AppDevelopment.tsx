@@ -1,16 +1,20 @@
 "use client";
 
+import useInView from "@/hooks/useInView";
 import { MoveRight, Smartphone } from "lucide-react";
 import { motion } from "motion/react";
 
 const AppDevelopment = () => {
+  const { isVisible, ref } = useInView();
   return (
-    <div className="flex flex-col md:flex-row items-center gap-6 mt-12 px-4 sm:px-6 lg:px-0">
+    <div
+      ref={ref}
+      className="flex flex-col md:flex-row items-center gap-6 mt-12 px-4 sm:px-6 lg:px-0"
+    >
       <motion.div
         initial={{ x: -50, opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1 }}
+        animate={{ x: isVisible ? 0 : -50, opacity: isVisible ? 1 : 0 }}
         transition={{ duration: 1 }}
-        viewport={{ once: true }}
         className="w-full md:w-1/2 h-72 sm:h-96 rounded-xl p-4 sm:p-6 shadow-lg bg-[#171f32]"
       >
         <img
@@ -21,34 +25,30 @@ const AppDevelopment = () => {
       </motion.div>
       <motion.div
         initial={{ x: 50, opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1 }}
+        animate={{ x: isVisible ? 0 : 50, opacity: isVisible ? 1 : 0 }}
         transition={{ duration: 1, delay: 0.5 }}
-        viewport={{ once: true }}
         className="w-full md:w-1/2 text-white"
       >
         <motion.div
           initial={{ y: 20, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
+          animate={{ y: isVisible ? 0 : 20, opacity: isVisible ? 1 : 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
-          viewport={{ once: true }}
           className="w-10 h-10 bg-[#252d44] flex justify-center items-center rounded-lg"
         >
           <Smartphone size={20} color="white" />
         </motion.div>
         <motion.h1
           initial={{ y: 20, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
+          animate={{ y: isVisible ? 0 : 20, opacity: isVisible ? 1 : 0 }}
           transition={{ duration: 0.5, delay: 0.7 }}
-          viewport={{ once: true }}
           className="text-3xl sm:text-4xl lg:text-5xl mt-4 font-bold max-w-xl"
         >
           Mobile App Development
         </motion.h1>
         <motion.p
           initial={{ y: 20, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
+          animate={{ y: isVisible ? 0 : 20, opacity: isVisible ? 1 : 0 }}
           transition={{ duration: 0.5, delay: 0.8 }}
-          viewport={{ once: true }}
           className="mt-6 font-light text-sm sm:text-base leading-relaxed text-white/75 max-w-2xl"
         >
           We build fast, scalable, and intuitive mobile applications designed
@@ -57,34 +57,30 @@ const AppDevelopment = () => {
         <ul className="list-disc mt-6 pl-5 flex flex-col gap-2">
           <motion.li
             initial={{ y: 20, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
+            animate={{ y: isVisible ? 0 : 20, opacity: isVisible ? 1 : 0 }}
             transition={{ duration: 0.5, delay: 1 }}
-            viewport={{ once: true }}
           >
             Cross-platform iOS & Android Development
           </motion.li>
           <motion.li
             initial={{ y: 20, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
+            animate={{ y: isVisible ? 0 : 20, opacity: isVisible ? 1 : 0 }}
             transition={{ duration: 0.5, delay: 1.1 }}
-            viewport={{ once: true }}
           >
             Real-time Data & API Integration
           </motion.li>
           <motion.li
             initial={{ y: 20, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
+            animate={{ y: isVisible ? 0 : 20, opacity: isVisible ? 1 : 0 }}
             transition={{ duration: 0.5, delay: 1.2 }}
-            viewport={{ once: true }}
           >
             Secure Authentication & Cloud Sync
           </motion.li>
         </ul>
         <motion.a
           initial={{ x: 20, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
+          animate={{ x: isVisible ? 0 : 20, opacity: isVisible ? 1 : 0 }}
           transition={{ duration: 0.5, delay: 1.3 }}
-          viewport={{ once: true }}
           href="#"
           className="flex items-center gap-2 mt-4 text-[#c0c9fc] hover:underline"
         >

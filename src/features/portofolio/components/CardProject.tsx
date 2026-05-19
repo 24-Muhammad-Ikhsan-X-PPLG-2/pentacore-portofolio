@@ -9,6 +9,7 @@ type CardProjectProps = {
   title: string;
   desc: string;
   delay?: number;
+  isVisible: boolean;
 };
 
 const CardProject: FC<CardProjectProps> = ({
@@ -17,11 +18,12 @@ const CardProject: FC<CardProjectProps> = ({
   img,
   title,
   delay = 0.3,
+  isVisible,
 }) => {
   return (
     <motion.div
       initial={{ y: 20, opacity: 0 }}
-      whileInView={{ y: 0, opacity: 1 }}
+      animate={{ y: isVisible ? 0 : 20, opacity: isVisible ? 1 : 0 }}
       transition={{ duration: 1, delay }}
       viewport={{ once: true }}
       className="w-full h-72 sm:h-80 md:h-96 lg:h-80 xl:h-96 rounded-xl bg-[#131b2e] border border-gray-800 shadow-lg overflow-hidden flex flex-col"

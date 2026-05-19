@@ -16,10 +16,12 @@ const Navbar: FC<NavbarProps> = ({ currentPage = "home" }) => {
     <>
       <nav className="w-full fixed z-9999 bg-[#0c1326]/90 backdrop-blur-lg border-b border-gray-800">
         <div className="h-18 flex items-center px-4 justify-between">
-          <div className="flex gap-1 items-center">
-            <img src="/logo.webp" className="w-16" width={64} alt="" />
-            <h1 className="text-white font-black text-2xl">Pentacore Labs</h1>
-          </div>
+          <Link href={"/"}>
+            <div className="flex gap-1 items-center">
+              <img src="/logo.webp" className="w-16" width={64} alt="" />
+              <h1 className="text-white font-black text-2xl">Pentacore Labs</h1>
+            </div>
+          </Link>
 
           {/* Desktop links */}
           <div className="hidden md:flex items-center">

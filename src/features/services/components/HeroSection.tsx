@@ -1,10 +1,15 @@
 "use client";
 
+import useInView from "@/hooks/useInView";
 import { motion } from "motion/react";
 
 const HeroSection = () => {
+  const { isVisible, ref } = useInView();
   return (
-    <section className="relative flex flex-col justify-center pt-28 pb-16 overflow-hidden bg-[#030b1d] px-4 sm:px-6 lg:px-8 text-white">
+    <section
+      ref={ref}
+      className="relative flex flex-col justify-center pt-28 pb-16 overflow-hidden bg-[#030b1d] px-4 sm:px-6 lg:px-8 text-white"
+    >
       {/* Gradient Glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(37,99,235,0.15),transparent_35%)] animate-pulse" />
 
@@ -49,9 +54,8 @@ const HeroSection = () => {
         <div className="max-w-3xl text-center md:text-left">
           <motion.p
             initial={{ y: -20, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
+            animate={{ y: isVisible ? 0 : -20, opacity: isVisible ? 1 : 0 }}
             transition={{ duration: 1 }}
-            viewport={{ once: true }}
             className="text-sm font-semibold tracking-[0.3em] text-[#c0c9fc]"
           >
             CORE CAPABILITIES
@@ -59,9 +63,8 @@ const HeroSection = () => {
 
           <motion.h1
             initial={{ x: -50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
+            animate={{ x: isVisible ? 0 : -50, opacity: isVisible ? 1 : 0 }}
             transition={{ duration: 1, delay: 0.3 }}
-            viewport={{ once: true }}
             className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-black leading-tight"
           >
             Engineering the next generation of{" "}
@@ -70,9 +73,8 @@ const HeroSection = () => {
 
           <motion.p
             initial={{ y: 50, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
+            animate={{ y: isVisible ? 0 : 50, opacity: isVisible ? 1 : 0 }}
             transition={{ duration: 1, delay: 0.4 }}
-            viewport={{ once: true }}
             className="mt-6 max-w-2xl text-base sm:text-lg leading-relaxed text-white/60"
           >
             We provide complete digital solutions to help businesses grow

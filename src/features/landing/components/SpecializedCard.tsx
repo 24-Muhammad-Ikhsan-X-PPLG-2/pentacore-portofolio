@@ -8,6 +8,7 @@ type SpecializedCardProps = {
   Icon: any;
   title: string;
   desc: string;
+  isVisible: boolean;
 };
 
 const SpecializedCard: FC<SpecializedCardProps> = ({
@@ -15,13 +16,13 @@ const SpecializedCard: FC<SpecializedCardProps> = ({
   Icon,
   title,
   delay,
+  isVisible,
 }) => {
   return (
     <motion.div
       initial={{ y: 20, opacity: 0 }}
-      whileInView={{ y: 0, opacity: 1 }}
+      animate={{ y: isVisible ? 0 : 1, opacity: isVisible ? 1 : 0 }}
       transition={{ duration: 1, delay: 0.5 * delay }}
-      viewport={{ once: true }}
       className="bg-[#171f32] p-5 w-full max-w-90 rounded-lg shadow-xl"
       suppressHydrationWarning
     >
