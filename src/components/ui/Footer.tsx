@@ -15,7 +15,7 @@ const Footer = () => {
               </h1>
             </Link>
             <p className="mt-4 text-sm sm:text-base max-w-xl text-gray-200">
-              Precission Engineered Digital Solutions for the modern enterprise
+              Precision Engineered Digital Solutions for the modern enterprise
             </p>
             <div className="mt-4 flex items-center gap-3">
               <a href="https://x.com/PENTACORE_LABS" target="_blank">
@@ -107,7 +107,7 @@ const Footer = () => {
         </div>
         <div className="mt-16 mb-8 border-t border-gray-800 pt-8">
           <p className="text-center text-gray-400 text-sm sm:text-base">
-            &copy; 2026 Pentacore Labs. Precission Engineered Digital Solutions
+            &copy; 2026 Pentacore Labs. Precision Engineered Digital Solutions
           </p>
         </div>
       </div>

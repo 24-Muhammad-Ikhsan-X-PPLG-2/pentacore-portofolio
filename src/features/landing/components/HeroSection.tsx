@@ -20,8 +20,8 @@ const HeroSection = () => {
       >
         <div className="w-full max-w-3xl lg:max-w-2xl">
           <div className="inline-flex px-3 py-1 bg-gray-500/50 border border-gray-500/80 rounded-full">
-            <p className="text-[10px] sm:text-xs font-bold text-gray-300 uppercase tracking-[0.2em]">
-              PRECISSION ENGINEERING
+            <p className="text-[10px] tracking-[0.3em] sm:text-xs font-bold text-gray-300 uppercase">
+              PRECISION ENGINEERING
             </p>
           </div>
           <h1 className="mt-5 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-left max-w-3xl">

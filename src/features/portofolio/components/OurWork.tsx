@@ -19,7 +19,7 @@ const OurWork = () => {
               initial={{ x: -20, opacity: 0 }}
               animate={{ x: isVisible ? 0 : -20, opacity: isVisible ? 1 : 0 }}
               transition={{ duration: 1 }}
-              className="text-[#c0c9fc] font-semibold"
+              className="text-[#c0c9fc] tracking-[0.3em] font-semibold"
             >
               OUR WORK
             </motion.p>
@@ -68,6 +68,7 @@ const OurWork = () => {
             img="/projects/fitra.webp"
             title="Fitra"
             delay={0.8}
+            href="https://fitra-black.vercel.app/"
           />
           <CardProject
             isVisible={isVisible}
@@ -85,13 +86,15 @@ const OurWork = () => {
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: isVisible ? 0 : 20, opacity: isVisible ? 1 : 0 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="bg-[#131b2e] rounded-xl border lg:col-span-2 border-gray-800 shadow-lg overflow-hidden"
+            className="bg-[#131b2e] rounded-xl border lg:col-span-2 border-gray-800 shadow-lg overflow-hidden group"
           >
-            <img
-              src="/projects/wikiarticle.webp"
-              className="h-60 w-full object-cover object-center"
-              alt=""
-            />
+            <div className="w-full h-60 overflow-hidden">
+              <img
+                src="/projects/wikiarticle.webp"
+                className="h-full group-hover:scale-105 transition-transform duration-300 w-full object-cover object-center"
+                alt=""
+              />
+            </div>
             <div className="p-4">
               <div className="flex justify-between items-center w-full">
                 <p className="text-[#bbc9ff] font-semibold text-sm">
@@ -102,8 +105,13 @@ const OurWork = () => {
                   <p>Ongoing Project</p>
                 </div>
               </div>
-
-              <h1 className="text-2xl font-bold mt-2">Wikiarticle</h1>
+              <a
+                href="https://github.com/24-Muhammad-Ikhsan-X-PPLG-2/wikiarticle"
+                target="_blank"
+                className="group-hover:text-blue-500 hover:underline"
+              >
+                <h1 className="text-2xl font-bold mt-2">Wikiarticle</h1>
+              </a>
               <p className="mt-2 font-light">
                 WikiArticle is a fast, minimalist, and modern platform built for
                 seamless knowledge sharing
@@ -115,13 +123,15 @@ const OurWork = () => {
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: isVisible ? 0 : 20, opacity: isVisible ? 1 : 0 }}
             transition={{ duration: 1, delay: 0.4 }}
-            className="bg-[#131b2e] rounded-xl border border-gray-800 shadow-lg overflow-hidden"
+            className="bg-[#131b2e] rounded-xl border group border-gray-800 shadow-lg overflow-hidden"
           >
-            <img
-              src="/projects/manga.webp"
-              className="h-60 w-full object-cover object-center"
-              alt=""
-            />
+            <div className="h-60 w-full overflow-hidden">
+              <img
+                src="/projects/manga.webp"
+                className="h-full w-full group-hover:scale-105 transition-transform duration-300 object-cover object-center"
+                alt=""
+              />
+            </div>
             <div className="p-4">
               <div className="flex justify-between items-center w-full">
                 <p className="text-[#bbc9ff] font-semibold text-sm">
@@ -132,7 +142,13 @@ const OurWork = () => {
                   <p>Ongoing Project</p>
                 </div>
               </div>
-              <h1 className="text-2xl font-bold mt-2">Zentora</h1>
+              <a
+                href="https://github.com/24-Muhammad-Ikhsan-X-PPLG-2/zentora"
+                target="_blank"
+                className="group-hover:text-blue-500 hover:underline"
+              >
+                <h1 className="text-2xl font-bold mt-2">Zentora</h1>
+              </a>
               <p className="mt-2 font-light">
                 Zentora is a fast, clean, and modern manga reader web
                 application designed for an immersive reading experience.

@@ -18,7 +18,7 @@ const HeroSection = () => {
               initial={{ y: -20, opacity: 0 }}
               animate={{ y: isVisible ? 0 : -20, opacity: isVisible ? 1 : 0 }}
               transition={{ duration: 1 }}
-              className="text-[#c0c9fc] text-xs sm:text-sm font-semibold tracking-widest uppercase"
+              className="text-[#c0c9fc] text-xs sm:text-sm tracking-[0.3em] font-semibold uppercase"
             >
               ABOUT US
             </motion.p>

@@ -16,7 +16,7 @@ const PrivacyPolicyPage = () => {
       <Navbar currentPage="privacy" />
       <div className="pt-28 pb-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-[0_30px_80px_rgba(2,66,255,0.08)] backdrop-blur-xl">
+          <div className="rounded-4xl border border-white/10 bg-white/5 p-8 shadow-[0_30px_80px_rgba(2,66,255,0.08)] backdrop-blur-xl">
             <div className="mb-10">
               <p className="text-sm uppercase tracking-[0.3em] text-[#6c7ae0]">
                 Privacy Policy

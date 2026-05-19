@@ -12,7 +12,7 @@ const ContactClient = () => {
       <section className="min-h-screen bg-[#0b1326] text-white px-4 sm:px-6 lg:px-10 pt-20 sm:pt-24 pb-12">
         <div className="max-w-2xl">
           <div className="inline-flex px-3 py-1 bg-gray-500/50 border border-gray-500/80 rounded-full">
-            <p className="text-[10px] sm:text-xs font-bold text-gray-300 uppercase tracking-[0.2em]">
+            <p className="text-[10px] sm:text-xs font-bold text-gray-300 uppercase tracking-[0.3em]">
               CONTACT US
             </p>
           </div>
@@ -21,10 +21,11 @@ const ContactClient = () => {
             <span className="text-[#004ff6]">Next Breakthrough.</span>
           </h1>
           <p className="mt-4 font-light max-w-xl text-sm sm:text-base leading-relaxed">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla nam
-            porro eveniet amet, repudiandae accusantium fugit error minima
-            doloremque, ipsam, odit quisquam non cupiditate molestiae ratione
-            temporibus vitae. Alias, aliquam!
+            We’d love to hear about your business and help bring your ideas into
+            a modern digital experience. Whether you need a website for your
+            SME, F&B brand, educational institution, or growing business, our
+            team is ready to provide creative solutions with clear communication
+            and professional support.
           </p>
         </div>
         <div className="mt-16 lg:mt-24 mb-20 flex flex-col justify-center items-center">

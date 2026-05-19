@@ -30,13 +30,15 @@ const CardProject: FC<CardProjectProps> = ({
       animate={{ y: isVisible ? 0 : 20, opacity: isVisible ? 1 : 0 }}
       transition={{ duration: 1, delay }}
       viewport={{ once: true }}
-      className="w-full h-72 sm:h-80 md:h-96 lg:h-80 xl:h-96 rounded-xl bg-[#131b2e] border border-gray-800 shadow-lg overflow-hidden flex flex-col"
+      className="w-full h-72 sm:h-80 md:h-96 lg:h-80 xl:h-96 rounded-xl bg-[#131b2e] border border-gray-800 shadow-lg overflow-hidden flex flex-col group"
     >
-      <img
-        src={img}
-        className="w-full h-28 sm:h-32 md:h-40 lg:h-40 xl:h-44 object-cover object-center"
-        alt=""
-      />
+      <div className="w-full h-28 sm:h-32 md:h-40 lg:h-40 xl:h-44 overflow-hidden">
+        <img
+          src={img}
+          className="w-full h-full group-hover:scale-110 transition-transform duration-300 object-cover object-center"
+          alt=""
+        />
+      </div>
       <div className="p-3 sm:p-4 md:p-5 flex-1 flex flex-col">
         <div>
           <div className="flex justify-between items-center w-full">
@@ -55,8 +57,11 @@ const CardProject: FC<CardProjectProps> = ({
               )}
             </div>
           </div>
-          <a href={href} target="_blank">
-            <h1 className="text-2xl hover:underline font-bold mt-1 sm:mt-2 line-clamp-2">
+          <a
+            href={href}
+            className="group-hover:text-blue-500 transition duration-300 hover:underline"
+          >
+            <h1 className="text-2xl font-bold mt-1 sm:mt-2 line-clamp-2">
               {title}
             </h1>
           </a>
